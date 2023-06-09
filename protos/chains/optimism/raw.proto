@@ -55,9 +55,10 @@ message Transaction {
   string source_hash = 16;
   string mint = 17;
   string chain_id = 18;
-
+  optional string max_fee_per_gas = 19;
+  optional string max_priority_fee_per_gas = 20;
   // Optimism specific fields
-  string queue_origin = 20;
+  string queue_origin = 21;
   string l1_tx_origin = 22;
   string l1_block_number = 23;
   string l1_timestamp = 24;
@@ -66,7 +67,7 @@ message Transaction {
   string raw_transaction = 27;
 }
 
-message TransactionReceipt {
+  message TransactionReceipt {
   string transaction_hash = 1;
   string transaction_index = 2; // hex string
   string block_hash = 3;
