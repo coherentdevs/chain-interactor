@@ -65,6 +65,8 @@ message Transaction {
   string index = 25;
   string queue_index = 26;
   string raw_transaction = 27;
+  repeated Access access_list = 28;
+
 }
 
   message TransactionReceipt {
@@ -118,4 +120,9 @@ message CallTrace {
   string error = 10;
   string revert_reason = 11;
   repeated CallTrace calls = 12;
+}
+
+message Access {
+  string address = 1;
+  repeated string storage_keys = 2;
 }
