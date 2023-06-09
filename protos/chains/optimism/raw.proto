@@ -10,7 +10,6 @@ message Data {
 }
 
 message Block {
-  string number = 1; // hex string
   string hash = 2;
   string parent_hash = 3;
   string nonce = 4;
@@ -32,6 +31,8 @@ message Block {
 
   // extra fields from alchemy and quicknode
   string mix_hash = 21;
+  string base_fee_per_gas = 22;
+
 }
 
 message Transaction {
@@ -49,6 +50,10 @@ message Transaction {
   string v = 12;
   string r = 13;
   string s = 14;
+  string type = 15;
+  string source_hash = 16;
+  string mint = 17;
+  string chain_id = 18;
 
   // Optimism specific fields
   string queue_origin = 20;
