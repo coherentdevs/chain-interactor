@@ -10,6 +10,7 @@ message Data {
 }
 
 message Block {
+  string number = 1; // hex string
   string hash = 2;
   string parent_hash = 3;
   string nonce = 4;
