@@ -87,6 +87,7 @@ message TransactionReceipt {
   string l1_fee_scalar = 17;
   string l1_gas_price = 18;
   string l1_gas_used = 19;
+  string type = 20;
 }
 
 message Log {
